@@ -6,6 +6,7 @@ SYMBOLS = list('!"#$%&\'()*+,-./:;?@[]^_`{|}~')
 
 def generate_password():
     # Start coding here
+    pass
 
 
 def validate(password):
