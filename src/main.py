@@ -14,13 +14,12 @@ def generate_password():
     len_symbols = len_password - len_numbers - len_lowercase - len_uppercase
     
     numbers = list(random.sample(string.digits*2, len_numbers))
-    lowercase_letters = list(random.sample(
-        string.ascii_lowercase, len_lowercase))
-    uppercase_letters = list(random.sample(
-        string.ascii_uppercase, len_uppercase))
+    lowercase_letters = list(random.sample(string.ascii_lowercase, len_lowercase))
+    uppercase_letters = list(random.sample(string.ascii_uppercase, len_uppercase))
     symbols = list(random.sample(SYMBOLS, len_symbols))
 
     password = lowercase_letters + uppercase_letters + symbols + numbers
+    random.shuffle(password)
     return ''.join(password)
 
 
